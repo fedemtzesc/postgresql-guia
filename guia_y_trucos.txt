@@ -85,7 +85,7 @@ a cabo los siguientes pasos:
                 misma que le habiamos puesto en la base de datos, y hacemos lo 
                 mismo cuando se nos solicite la confirmacion.
 
-    
+    x
 
     
 
