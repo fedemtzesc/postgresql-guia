@@ -1,0 +1,14 @@
+¿Qué es PostgreSQL?
+
+    PostgreSQL, o simplemente Postgres para darle un nombre más pintoresco, 
+es un sistema de código abierto de administración de bases de datos del tipo 
+relacional, aunque también es posible ejecutar consultas que sean no 
+relaciones. En este sistema, las consultas relacionales se basan en SQL, 
+mientras que las no relacionales hacen uso de JSON.
+
+Como instalar Postresql
+
+    Para realizar la instalacion de esta base de datos se tienen que llevar
+a cabo los siguientes pasos:
+
+
