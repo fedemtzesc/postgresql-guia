@@ -85,7 +85,28 @@ a cabo los siguientes pasos:
                 misma que le habiamos puesto en la base de datos, y hacemos lo 
                 mismo cuando se nos solicite la confirmacion.
 
-    x
+    9.  Para crear un usuario nuevo primeramente entramos a una sesion en la 
+        base de datos, como se indica en los puntos 4 y 5.
+
+        Una vez estando dentro ejecutamos el siguiente comando SQL:
+
+            CREATE USER nombrenuevousuario WITH PASSWORD 'passwordusuario';
+
+        OJO: el nombre del usuario nuevo no va entre comillas.
+
+    10. Para crear una base de datos que le pertenezca a nuestro nuevo usuario
+        tecleamos el sguiente comando SQL:
+
+
+            CREATE DATABASE nombrenuevaBD WITH OWNER nombrenuevousuario;
+
+    11. Para asignarle el rol de superusuario a nuestro usuario nuevo se tiene
+        que ejecutar el siguiente comando:
+
+            ALTER USER nombrenuevousuario WITH superuser;
+    
+    12. 
+
 
     
 
