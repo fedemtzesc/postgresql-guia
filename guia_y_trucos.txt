@@ -1,3 +1,7 @@
+===============================================================================
+                            GUIA DE POSTGRESQL
+===============================================================================
+
 ¿Qué es PostgreSQL?
 
     PostgreSQL, o simplemente Postgres para darle un nombre más pintoresco, 
@@ -10,5 +14,82 @@ Como instalar Postresql
 
     Para realizar la instalacion de esta base de datos se tienen que llevar
 a cabo los siguientes pasos:
+
+    1.  Actualizamos nuestro repositorio primero con el siguiente comando:
+            
+            sudo apt update -y
+
+    2.  Despues utilizamos el siguiente comando para instalar nuestro servidor
+        de PostgreSQL:
+
+            sudo apt install postgresql postgresql-contrib
+
+    3.  Ahora verificamos que este como seervicio levantado con el siguiente 
+        comando:
+
+        sudo systemctl status postgresql
+
+        La salida tiene que ser algo parecido a esto:
+
+                ● postgresql.service - PostgreSQL RDBMS
+            Loaded: loaded (/lib/systemd/system/postgresql.service; enabled; vendor pr>
+            Active: active (exited) since Wed 2023-04-19 11:00:35 CST; 3h 20min ago
+           Process: 34726 ExecStart=/bin/true (code=exited, status=0/SUCCESS)
+          Main PID: 34726 (code=exited, status=0/SUCCESS)
+               CPU: 1ms
+
+        abr 19 11:00:35 maximus systemd[1]: Starting PostgreSQL RDBMS...
+        abr 19 11:00:35 maximus systemd[1]: Finished PostgreSQL RDBMS.
+        lines 1-9/9 (END)
+
+    4.  Para entrar en una instancia de PöstgreSQL tenemos que cambiarnos al 
+        usuario postgres con este comando:
+
+            sudo -i -u postgres
+
+    5.  Ejecutamos el siguiente comando para conectarnos al servidor de 
+        nuestra base de datos PostgreSQL:
+
+            psql 
+
+        El sistema de la base de datos nos mostrara el siguiente prompt:
+
+            psql (14.7 (Ubuntu 14.7-0ubuntu0.22.04.1))
+            Type "help" for help.
+
+            postgres=# 
+
+    6.  Ahora, para cambiar el password del usuario postgres dentro del
+        servidor de base de datos ejecutamos el siguiente comando SQL:
+
+            ALTER USER postgres PASSWORD 'mynewpassword';
+
+    7.  Una vez cambiado el password el a base de datos nos salimos de la
+        base de datos con el siguiente comando:
+
+            \q
+
+        Esto nos sacara de la sesion de la base de datos, y despues para salir
+        de la sesion del usuario postgres en Linux y cambiarnos a nuestro 
+        usuario tecleamos el comando:
+
+            exit 
+
+    8.  Finalmente para tener homologadas las contraseñas del usuario posgres 
+        tanto en la base de datos como en nuestro sistema linux tecleamos el 
+        siguiente comando para cambiarle la contraseña:
+
+            sudo passwd postgres 
+            
+            *** Nos va a solicitar la nueva contraseña, asi que le tecleamos la
+                misma que le habiamos puesto en la base de datos, y hacemos lo 
+                mismo cuando se nos solicite la confirmacion.
+
+    
+
+    
+
+
+
 
 
