@@ -105,7 +105,34 @@ a cabo los siguientes pasos:
 
             ALTER USER nombrenuevousuario WITH superuser;
     
-    12. 
+    12. Para listar todas las bases de datos de nuestro servidor Postgres tecleamos:
+
+            \l
+
+    13. Para usar o cambiarnos a una base de datos tecleamos el siguiente comando:
+
+            \c nombre_bd_a_ir
+
+    14. Ejemplo de creacion de tabla con campo identidad auto-incrementable:
+
+        create table libros(
+            codigo serial,
+            titulo varchar(20),
+            autor varchar(30),
+            editorial varchar(15),
+            primary key (codigo)
+        );
+
+        El tipo serial indica que el campo codigo sera auto-incrementable y se 
+        creara de manera automatica una serie asociada a este campo a donde se
+        ira a tomar el siguiente ID al momento de insertar un nuevo registro.
+
+    15. Para truncar una table y se reinicie el ID de su campo autoincrementable
+        tenemos que ejecutar el siguiente comando:
+
+            truncate table libros restart identity;
+
+    
 
 
     
